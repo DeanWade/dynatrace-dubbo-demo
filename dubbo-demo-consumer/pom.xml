@@ -144,7 +144,7 @@
 		<dependency>
 			<groupId>com.dynatrace</groupId>
 			<artifactId>dynatrace-dubbo</artifactId>
-			<version>6.3</version>
+			<version>6.5</version>
 			<scope>runtime</scope>	
 		</dependency>
 	</dependencies>
