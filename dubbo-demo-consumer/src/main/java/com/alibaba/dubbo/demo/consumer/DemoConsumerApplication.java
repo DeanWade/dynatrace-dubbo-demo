@@ -1,12 +1,12 @@
-package com.alibaba.dubbo.demo.web;
+package com.alibaba.dubbo.demo.consumer;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class DubboDemoWebApplication {
+public class DemoConsumerApplication {
 
 	public static void main(String[] args) throws InterruptedException {
-		SpringApplication.run(DubboDemoWebApplication.class);
+		SpringApplication.run(DemoConsumerApplication.class);
 	}
 }
