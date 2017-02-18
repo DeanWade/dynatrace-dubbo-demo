@@ -8,12 +8,13 @@ import org.springframework.web.bind.annotation.RestController;
 import com.alibaba.dubbo.demo.DemoService;
 
 @RestController
+@RequestMapping("/dubbo")
 public class WebController {
 
 	@Autowired
 	private DemoService demoService;
 	
-    @RequestMapping("/")
+    @RequestMapping("/home")
     public String home(@RequestParam(name="name", defaultValue="dubbo") String name) {
     	return this.demoService.sayHello(name);
     }

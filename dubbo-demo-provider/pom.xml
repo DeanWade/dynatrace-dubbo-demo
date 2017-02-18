@@ -33,6 +33,9 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
+		
+		<dynatrace.version>6.5</dynatrace.version>
+		
 	</properties>
 
 	<dependencies>
@@ -82,13 +85,14 @@
 		<dependency>
 			<groupId>com.dynatrace</groupId>
 			<artifactId>dynatrace-dubbo</artifactId>
-			<version>6.5</version>
+			<version>${dynatrace.version}</version>
 			<scope>runtime</scope>
 		</dependency>
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
+			<groupId>com.dynatrace</groupId>
+			<artifactId>com.dynatrace.adk</artifactId>
+			<version>${dynatrace.version}</version>
+			<scope>runtime</scope>
 		</dependency>
 		
 	</dependencies>
