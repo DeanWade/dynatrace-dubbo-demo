@@ -81,7 +81,7 @@
 		
 		<dependency>
 			<groupId>com.dynatrace</groupId>
-			<artifactId>dynatrace-dubbo</artifactId>
+			<artifactId>dynatrace-aspectj-dubbo</artifactId>
 			<version>${dynatrace.version}</version>
 			<scope>runtime</scope>
 		</dependency>
