@@ -15,7 +15,7 @@ public class WebController {
 	private DemoService demoService;
 	
     @RequestMapping("/home")
-    public String home(@RequestParam(name="name", defaultValue="dubbo") String name) {
-    	return this.demoService.sayHello(name);
+    public String home(@RequestParam(name="wait", defaultValue="1") int seconds) {
+    	return demoService.sayHello(seconds);
     }
 }
