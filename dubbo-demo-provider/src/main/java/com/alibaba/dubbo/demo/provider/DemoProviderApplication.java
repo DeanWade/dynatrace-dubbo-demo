@@ -10,7 +10,6 @@ public class DemoProviderApplication {
 
 	public static void main(String[] args) throws InterruptedException {
 		SpringApplication.run(DemoProviderApplication.class);
-		
 		new CountDownLatch(1).await();;
 	}
 

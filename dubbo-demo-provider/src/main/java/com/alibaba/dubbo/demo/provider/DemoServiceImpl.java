@@ -17,7 +17,7 @@ public class DemoServiceImpl implements DemoService {
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
-        return "Hello " + name + ", response form provider: " + RpcContext.getContext().getLocalAddress() + " @ " + new Date().toString();
+        return "Hello " + name + ", responded form provider: " + RpcContext.getContext().getLocalAddress() + " @ " + new Date().toString();
     }
 
 	@Override
