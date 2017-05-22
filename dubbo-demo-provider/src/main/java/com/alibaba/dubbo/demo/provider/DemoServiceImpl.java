@@ -21,7 +21,7 @@ public class DemoServiceImpl implements DemoService {
     }
 
 	@Override
-	public String sayHello(int seconds) {
+	public synchronized String sayHello(int seconds) {
         try {
 			Thread.sleep(seconds * 1000);
 		} catch (InterruptedException e) {

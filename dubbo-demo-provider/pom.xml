@@ -85,7 +85,7 @@
 			<artifactId>zkclient</artifactId>
 			<version>0.1</version>
 		</dependency>
-		
+		<!-- 		
 		<dependency>
 			<groupId>com.dynatrace</groupId>
 			<artifactId>dynatrace-aspectj-dubbo</artifactId>
@@ -98,9 +98,10 @@
 			<version>${dynatrace.version}</version>
 			<scope>runtime</scope>
 		</dependency>
+ 		-->
+ 	
 	</dependencies>
 
-		
 	<build>
 		<plugins>
 			<plugin>

@@ -79,7 +79,7 @@
 			<version>0.1</version>
 		</dependency>
 		
-		<dependency>
+<!-- 		<dependency>
 			<groupId>com.dynatrace</groupId>
 			<artifactId>dynatrace-aspectj-dubbo</artifactId>
 			<version>${dynatrace.version}</version>
@@ -90,7 +90,7 @@
 			<artifactId>com.dynatrace.adk</artifactId>
 			<version>${dynatrace.version}</version>
 			<scope>runtime</scope>
-		</dependency>
+		</dependency> -->
 		
 	</dependencies>
 
