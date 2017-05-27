@@ -23,6 +23,8 @@
 	<dubbo:application name="demo-consumer"  />
 	
 	<dubbo:consumer check="false" timeout="30000"/>
+	
+	<dubbo:protocol host="127.0.0.1" name="dubbo" port="20880" />
 
     <dubbo:registry id="zookeeper" protocol="zookeeper" address="${dubbo.registry.address}" />
     
