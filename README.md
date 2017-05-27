@@ -2,10 +2,13 @@
 the project is to provider a demo project for distributed tracing provided by dynatrace appmon for dubbo application.
 
 ## build
-under fold "dynatrace-dubbo-demo", execute "mvn install" to build the project.
+under fold "dynatrace-dubbo-demo", execute build command.
+```bash
+mvn clean install
+```
 
 ## run
-1. start up zookeeper instance in localhost.
+1. start Apache Zookeeper.
 
 2. under fold "dynatrace-dubbo-demo\dubbo-demo-consumer\target", start dubbo-demo-consumer with
 ```java
