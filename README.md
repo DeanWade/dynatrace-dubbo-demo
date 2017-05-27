@@ -33,7 +33,7 @@ add jvm argument to dubbo provider.
 ```
 
 ## topology
-automatically disovered topology by dynatrace appmon
+automatical discovered topology by dynatrace appmon
 ![TransactionFlow](https://github.com/DeanWade/deanwade.github.io/blob/master/image/dynatrace/dubbo/TransactionFlow.png)
 
 ## method level tracing
