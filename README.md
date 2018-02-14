@@ -1,5 +1,5 @@
 # dynatrace-dubbo-demo
-the project is to provider a demo project for distributed tracing provided by dynatrace appmon for dubbo application.
+the project is to provide a demo application to showcase distributed tracing across dubbo application by dynatrace appmon
 
 ## build
 build project with maven
@@ -12,12 +12,12 @@ mvn clean install
 2. start dubbo-demo-consumer.
 ```java
 cd dynatrace-dubbo-demo\dubbo-demo-consumer\target
-java -jar dubbo-demo-consumer-1.4.5.RELEASE.jar
+java -jar dubbo-demo-consumer-*.RELEASE.jar
 ```
 3. start dubbo-demo-provider.
 ```java
 cd dynatrace-dubbo-demo\dubbo-demo-provider\target
-java -jar dubbo-demo-provider-1.4.5.RELEASE.jar
+java -jar dubbo-demo-provider-*.RELEASE.jar
 ```
 
 ## test
@@ -29,11 +29,11 @@ http://localhost:8080/dubbo/home
 to mintor the application with dynatrace appmon. 
 add jvm argument to dubbo consumer.
 ```sh
--agentpath:"C:\Program Files\dynaTrace\dynaTrace 6.5\agent\lib64\dtagent.dll"=name=dubbo-consumer,server=localhost
+-agentpath:"C:\Program Files\dynaTrace\agent\lib64\dtagent.dll"=name=dubbo-consumer,server=localhost
 ```
 add jvm argument to dubbo provider.
 ```sh
--agentpath:"C:\Program Files\dynaTrace\dynaTrace 6.5\agent\lib64\dtagent.dll"=name=dubbo-provider,server=localhost
+-agentpath:"C:\Program Files\dynaTrace\agent\lib64\dtagent.dll"=name=dubbo-provider,server=localhost
 ```
 
 ## topology
