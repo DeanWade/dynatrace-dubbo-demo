@@ -36,10 +36,7 @@ add jvm argument to dubbo provider.
 -agentpath:"C:\Program Files\dynaTrace\agent\lib64\dtagent.dll"=name=dubbo-provider,server=localhost
 ```
 
-## topology
+## topology & method level tracing
 automatical discovered topology by dynatrace appmon
-![TransactionFlow](https://github.com/DeanWade/deanwade.github.io/blob/master/image/dynatrace/dubbo/TransactionFlow.png)
-
-## method level tracing
-![TransactionFlow](https://github.com/DeanWade/deanwade.github.io/blob/master/image/dynatrace/dubbo/PurePath.png)
+![PurePath](https://github.com/DeanWade/deanwade.github.io/blob/master/image/dynatrace/dubbo/dubbo-purepath.png)
 
