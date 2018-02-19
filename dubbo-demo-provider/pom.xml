@@ -87,21 +87,22 @@
 			<version>4.0.35.Final</version>
 		</dependency>
 
+<!-- 
 		<dependency>
 			<groupId>com.dynatrace</groupId>
 			<artifactId>dynatrace-dubbo</artifactId>
 			<version>${dynatrace-dubbo.version}</version>
 			<scope>runtime</scope>
 		</dependency>
-
-		<!-- 
+-->
+		
 		<dependency> 
 			<groupId>com.dynatrace</groupId>
 			<artifactId>dynatrace-oneagent-dubbo</artifactId>
 			<version>${dynatrace-oneagent-dubbo.version}</version>
 			<scope>runtime</scope> 
 		</dependency> 
-		-->
+		
 
 	</dependencies>
 
