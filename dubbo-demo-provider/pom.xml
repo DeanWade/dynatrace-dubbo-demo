@@ -33,8 +33,9 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
-		<dynatrace.version>6.5</dynatrace.version>
-		<dynatrace-oneagent-dubbo.version>1.0.0</dynatrace-oneagent-dubbo.version>
+		<dubbo.version>2.6.0</dubbo.version>
+		<dynatrace-dubbo.version>7.0.0.2470</dynatrace-dubbo.version>
+		<dynatrace-oneagent-dubbo.version>1.0.3</dynatrace-oneagent-dubbo.version>
 	</properties>
 
 	<dependencies>
@@ -47,67 +48,61 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-				
+
 		<dependency>
 			<groupId>com.alibaba</groupId>
 			<artifactId>dubbo-demo-api</artifactId>
 			<version>2.5.3</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>com.alibaba</groupId>
 			<artifactId>dubbo</artifactId>
-			<version>2.5.3</version>
-			<exclusions>
-				<exclusion>
-					<artifactId>spring</artifactId>
-					<groupId>org.springframework</groupId>
-				</exclusion>
-			</exclusions>
+			<version>${dubbo.version}</version>
 		</dependency>
+
 		<dependency>
-			<groupId>org.apache.zookeeper</groupId>
-			<artifactId>zookeeper</artifactId>
-			<version>3.4.6</version>
-			<exclusions>
-				<exclusion>
-					<groupId>org.slf4j</groupId>
-					<artifactId>slf4j-log4j12</artifactId>
-				</exclusion>
-				<exclusion>
-					<groupId>log4j</groupId>
-					<artifactId>log4j</artifactId>
-				</exclusion>
-			</exclusions>
-		</dependency>
-		<dependency>
-			<groupId>com.github.sgroschupf</groupId>
+			<groupId>com.101tec</groupId>
 			<artifactId>zkclient</artifactId>
-			<version>0.1</version>
+			<version>0.2</version>
 		</dependency>
-		
-		<!-- 
+		<dependency>
+			<groupId>org.apache.curator</groupId>
+			<artifactId>curator-framework</artifactId>
+			<version>2.12.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>fastjson</artifactId>
+			<version>1.2.31</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>3.4</version>
+		</dependency>
+		<dependency>
+			<groupId>io.netty</groupId>
+			<artifactId>netty-all</artifactId>
+			<version>4.0.35.Final</version>
+		</dependency>
+
 		<dependency>
 			<groupId>com.dynatrace</groupId>
 			<artifactId>dynatrace-dubbo</artifactId>
-			<version>${dynatrace.version}</version>
+			<version>${dynatrace-dubbo.version}</version>
 			<scope>runtime</scope>
 		</dependency>
-		<dependency>
-			<groupId>com.dynatrace</groupId>
-			<artifactId>com.dynatrace.adk</artifactId>
-			<version>${dynatrace.version}</version>
-			<scope>runtime</scope>
-		</dependency>
-		-->
-		
-		<dependency>
+
+		<!-- 
+		<dependency> 
 			<groupId>com.dynatrace</groupId>
 			<artifactId>dynatrace-oneagent-dubbo</artifactId>
 			<version>${dynatrace-oneagent-dubbo.version}</version>
-			<scope>runtime</scope>
-		</dependency>
- 	
+			<scope>runtime</scope> 
+		</dependency> 
+		-->
+
 	</dependencies>
 
 	<build>
@@ -118,4 +113,5 @@
 			</plugin>
 		</plugins>
 	</build>
+	
 </project>

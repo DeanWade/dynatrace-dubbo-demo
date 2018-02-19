@@ -7,8 +7,8 @@
 	
 	<dubbo:application name="demo-provider"  />
 	
-	<dubbo:protocol host="127.0.0.1" name="dubbo" port="20881" />
-
+	<dubbo:protocol host="127.0.0.1" name="dubbo" port="20881" server="netty4" />
+	
     <dubbo:registry id="zookeeper" protocol="zookeeper" address="${dubbo.registry.address}" />
     
 	<dubbo:service interface="com.alibaba.dubbo.demo.DemoService" ref="demoService" />
