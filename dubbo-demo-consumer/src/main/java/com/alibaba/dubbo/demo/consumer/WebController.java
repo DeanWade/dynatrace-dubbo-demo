@@ -15,17 +15,20 @@ public class WebController {
 	@Autowired
 	@Qualifier("demoServiceStub")
 	private DemoService demoService;
-	
-    @RequestMapping("/home")
-    public String home(@RequestParam(name="wait", defaultValue="1") int seconds) {
-    	String result = demoService.sayHello(seconds);
-    	return result;
-    }
     
-    @RequestMapping("/home2")
-    public String home2(@RequestParam(name="name", defaultValue="dt") String name) {
-//    	name = UUID.randomUUID().toString();
-    	String result = demoService.sayHello(name);
-    	return result;
+    @RequestMapping("/home")
+    public String home(@RequestParam(name="name", defaultValue="dt") String name) {
+		return demoService.sayHello(name);
     }
+
+
+	@RequestMapping("/home2")
+	public String home2(@RequestParam(name="wait", defaultValue="1") int seconds) {
+		return demoService.sayHello2(seconds);
+	}
+
+	@RequestMapping("/home3")
+	public String home3() {
+		return demoService.sayHello3();
+	}
 }

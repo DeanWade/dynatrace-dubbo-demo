@@ -19,6 +19,8 @@ public interface DemoService {
 
 	String sayHello(String name);
 	
-	String sayHello(int seconds);
+	String sayHello2(int seconds);
+
+	String sayHello3();
 
 }

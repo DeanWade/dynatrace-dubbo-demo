@@ -11,17 +11,17 @@ public class DemoServiceStub implements DemoService{
 
 	@Autowired
 	@Qualifier("demoService")
-	private DemoService stub;
+	private DemoService remote;
 	 
 	@Override
 	public String sayHello(String name) {
-		return stub.sayHello(name);
+		return remote.sayHello(name);
 	}
 
 	@Override
-	public String sayHello(int seconds) {
-		String result = stub.sayHello(seconds);
-		return result;
-	}
+	public String sayHello2(int seconds) { return remote.sayHello2(seconds); }
+
+	@Override
+	public String sayHello3() { return remote.sayHello3(); }
 
 }

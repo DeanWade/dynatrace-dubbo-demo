@@ -11,7 +11,8 @@ buildNumber.properties
 *.project
 *.classpath
 *.springBeans
-
+.idea/
+*.iml
 # =========================
 # Operating System Files
 # =========================
