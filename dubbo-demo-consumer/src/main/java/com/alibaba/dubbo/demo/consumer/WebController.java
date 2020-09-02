@@ -21,14 +21,16 @@ public class WebController {
 		return demoService.sayHello(name);
     }
 
-
 	@RequestMapping("/home2")
-	public String home2(@RequestParam(name="wait", defaultValue="1") int seconds) {
-		return demoService.sayHello2(seconds);
-	}
+	public String home2(@RequestParam(name="wait", defaultValue="1") int seconds) { return demoService.sayHello2(seconds); }
 
 	@RequestMapping("/home3")
 	public String home3() {
 		return demoService.sayHello3();
+	}
+
+	@RequestMapping("/home4")
+	public String home4() {
+		return demoService.sayHello4();
 	}
 }

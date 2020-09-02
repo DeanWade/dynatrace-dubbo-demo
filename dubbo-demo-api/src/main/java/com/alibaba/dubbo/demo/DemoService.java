@@ -23,4 +23,5 @@ public interface DemoService {
 
 	String sayHello3();
 
+	String sayHello4();
 }

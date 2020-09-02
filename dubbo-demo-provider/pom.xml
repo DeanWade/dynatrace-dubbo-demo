@@ -16,26 +16,21 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	
+
+	<groupId>com.alibaba</groupId>
 	<artifactId>dubbo-demo-provider</artifactId>
 	<packaging>jar</packaging>
 	<name>${project.artifactId}</name>
 	<description>The demo provider module of dubbo project</description>
-	
+
 	<parent>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>1.5.21.RELEASE</version>
-		<relativePath />
+		<groupId>com.dynatrace</groupId>
+		<artifactId>dynatrace-dubbo-demo</artifactId>
+		<version>2.6.0</version>
 	</parent>
-	
+
 	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-		<java.version>1.8</java.version>
-		<dubbo.version>2.6.0</dubbo.version>
-		<dynatrace-dubbo.version>7.0.0.2470</dynatrace-dubbo.version>
-		<dynatrace-oneagent-dubbo.version>1.6.0</dynatrace-oneagent-dubbo.version>
+		<maven.deploy.skip>false</maven.deploy.skip>
 	</properties>
 
 	<dependencies>
@@ -86,24 +81,11 @@
 			<artifactId>netty-all</artifactId>
 			<version>4.0.35.Final</version>
 		</dependency>
-
-
-		<!--<dependency>-->
-		<!--<groupId>com.dynatrace</groupId>-->
-		<!--<artifactId>dynatrace-dubbo</artifactId>-->
-		<!--<version>${dynatrace-dubbo.version}</version>-->
-		<!--<scope>runtime</scope>-->
-	<!--</dependency>-->
-
-		
- 		<dependency>
- 			<groupId>com.dynatrace</groupId>
- 			<artifactId>dynatrace-oneagent-dubbo</artifactId>
- 			<version>${dynatrace-oneagent-dubbo.version}</version>
- 			<scope>runtime</scope>
- 		</dependency>
-		
-
+		<dependency>
+			<groupId>com.dynatrace</groupId>
+			<artifactId>dynatrace-oneagent-dubbo</artifactId>
+			<version>${dynatrace-oneagent-dubbo.version}</version>
+		</dependency>
 	</dependencies>
 
 	<build>
@@ -114,5 +96,5 @@
 			</plugin>
 		</plugins>
 	</build>
-	
+
 </project>

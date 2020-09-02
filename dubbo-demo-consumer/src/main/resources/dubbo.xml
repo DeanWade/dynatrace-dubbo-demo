@@ -24,10 +24,13 @@
 	
 	<dubbo:consumer check="false" timeout="30000" client="netty4"/>
 	<!--
-	<dubbo:protocol host="127.0.0.1" name="dubbo" port="20880" />
-	 -->
-    <dubbo:registry id="zookeeper" protocol="zookeeper" address="${dubbo.registry.address}" />
-    
+	<dubbo:protocol host="127.0.0.1" name="dubbo" port="20880" server="netty4" />
 	<dubbo:reference id="demoService" interface="com.alibaba.dubbo.demo.DemoService" retries="0"/>
-	
+	 -->
+	<dubbo:protocol host="${dubbo.protocol.host}" name="${dubbo.protocol.name}" port="${dubbo.protocol.port}" server="netty4" />
+
+	<dubbo:registry id="zookeeper" protocol="zookeeper" address="${dubbo.registry.address}" />
+
+	<dubbo:reference id="demoService" interface="com.alibaba.dubbo.demo.DemoService" retries="2" timeout="180000"/>
+
 </beans>

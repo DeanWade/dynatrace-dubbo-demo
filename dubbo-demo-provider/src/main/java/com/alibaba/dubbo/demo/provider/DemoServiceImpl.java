@@ -3,6 +3,8 @@ package com.alibaba.dubbo.demo.provider;
 import java.util.Date;
 import java.util.Random;
 
+import com.alibaba.dubbo.demo.AbstractDemoService;
+import com.alibaba.dubbo.demo.BaseException;
 import org.springframework.stereotype.Service;
 
 import com.alibaba.dubbo.demo.DemoException;
@@ -10,12 +12,12 @@ import com.alibaba.dubbo.demo.DemoService;
 import com.alibaba.dubbo.rpc.RpcContext;
 
 @Service("demoService")
-public class DemoServiceImpl implements DemoService {
+public class DemoServiceImpl extends AbstractDemoService {
 
 	@Override
     public String sayHello(String name) {
         try {
-			Thread.sleep(1000);
+			Thread.sleep(10*60*1000);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
@@ -40,12 +42,23 @@ public class DemoServiceImpl implements DemoService {
 
 	@Override
 	public String sayHello3() {
-        try {
-            int i = new Random().nextInt(5) * 1000;
-            Thread.sleep(i);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        throw new DemoException("the sleep time is too long, more than 10 seconds");
+		try {
+			int i = new Random().nextInt(2) * 1000;
+			Thread.sleep(i);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		throw new BaseException("the sleep time is too long, more than 10 seconds");
+	}
+
+	@Override
+	public String sayHello4() {
+		try {
+			int i = new Random().nextInt(2) * 1000;
+			Thread.sleep(i);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		throw new DemoException("current timestamp:" + System.currentTimeMillis());
 	}
 }
